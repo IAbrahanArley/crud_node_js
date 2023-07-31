@@ -10,12 +10,12 @@ mongoose.Promise = global.Promise
 mongoose.connect('mongodb://db/mydb')
 
 server.use(bodyParser.urlencoded({extended:true}))
-server.use(bodyParser.jason())
+server.use(bodyParser.json())
 server.use(cors())
 
 //ODM
 
-const Client = restful.model('client', {
+const Client = restful.model('Client', {
     name: {type: String, required: true}
 })
 
